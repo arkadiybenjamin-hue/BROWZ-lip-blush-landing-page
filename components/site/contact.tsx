@@ -66,7 +66,7 @@ export function Contact() {
                     id="phone"
                     name="phone"
                     type="tel"
-                    placeholder="[WhatsApp Number]"
+                    placeholder="+971 50 534 4208"
                     className="h-12"
                   />
                 </Field>

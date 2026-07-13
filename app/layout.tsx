@@ -18,9 +18,9 @@ const cormorant = Cormorant_Garamond({
 })
 
 export const metadata: Metadata = {
-  title: '[Studio Name] — Lip Blush PMU Studio',
+  title: 'BROWZ Lip Blush Dubai | Soft, Natural Lip Colour',
   description:
-    'Soft, natural lip blush permanent makeup, custom-matched to your skin tone. Send a photo for a free consultation.',
+    'Discover natural-looking Lip Blush at BROWZ Dubai. Custom-matched colour, improved definition and a complimentary consultation.',
   icons: {
     icon: [
       {

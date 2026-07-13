@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from 'lucide-react'
+import { Clock3, Globe, Mail, MapPin, Phone } from 'lucide-react'
 import { site } from '@/lib/site'
 import { InstagramIcon, WhatsAppIcon } from './icons'
 
@@ -24,15 +24,24 @@ export function Footer() {
               beautifully and feel unmistakably like you.
             </p>
             <div className="mt-6 flex items-center gap-3">
-              <a
-                href={site.instagramLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="inline-flex size-10 items-center justify-center rounded-full border border-footer-foreground/25 transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground"
-              >
-                <InstagramIcon className="size-4" />
-              </a>
+              {site.instagramLink ? (
+                <a
+                  href={site.instagramLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="inline-flex size-10 items-center justify-center rounded-full border border-footer-foreground/25 transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground"
+                >
+                  <InstagramIcon className="size-4" />
+                </a>
+              ) : (
+                <span
+                  aria-label="Instagram"
+                  className="inline-flex size-10 items-center justify-center rounded-full border border-footer-foreground/25 text-footer-foreground/65"
+                >
+                  <InstagramIcon className="size-4" />
+                </span>
+              )}
               <a
                 href={site.whatsappLink}
                 target="_blank"
@@ -72,7 +81,16 @@ export function Footer() {
             <ul className="mt-5 space-y-4 text-sm text-footer-foreground/80">
               <li className="flex items-start gap-3">
                 <MapPin className="mt-0.5 size-4 shrink-0 text-primary" />
-                <span>{site.city}</span>
+                <span>{site.address}</span>
+              </li>
+              <li>
+                <a
+                  href={site.phoneLink}
+                  className="flex items-start gap-3 transition-colors hover:text-primary"
+                >
+                  <Phone className="mt-0.5 size-4 shrink-0 text-primary" />
+                  <span>{site.phoneNumber}</span>
+                </a>
               </li>
               <li>
                 <a
@@ -81,7 +99,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="flex items-start gap-3 transition-colors hover:text-primary"
                 >
-                  <Phone className="mt-0.5 size-4 shrink-0 text-primary" />
+                  <WhatsAppIcon className="mt-0.5 size-4 shrink-0 text-primary" />
                   <span>{site.whatsappNumber}</span>
                 </a>
               </li>
@@ -92,6 +110,25 @@ export function Footer() {
                 >
                   <Mail className="mt-0.5 size-4 shrink-0 text-primary" />
                   <span>{site.email}</span>
+                </a>
+              </li>
+              <li className="flex items-start gap-3">
+                <Clock3 className="mt-0.5 size-4 shrink-0 text-primary" />
+                <span>{site.openingHours}</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <InstagramIcon className="mt-0.5 size-4 shrink-0 text-primary" />
+                <span>{site.instagramHandle}</span>
+              </li>
+              <li>
+                <a
+                  href={site.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-3 transition-colors hover:text-primary"
+                >
+                  <Globe className="mt-0.5 size-4 shrink-0 text-primary" />
+                  <span>browz.ae</span>
                 </a>
               </li>
             </ul>

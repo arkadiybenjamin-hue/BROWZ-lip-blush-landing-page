@@ -18,9 +18,34 @@ const cormorant = Cormorant_Garamond({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://browz-lip-blush-landing-page.vercel.app'),
   title: 'BROWZ Lip Blush Dubai | Soft, Natural Lip Colour',
   description:
     'Discover natural-looking Lip Blush at BROWZ Dubai. Custom-matched colour, improved definition and a complimentary consultation.',
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    url: 'https://browz-lip-blush-landing-page.vercel.app',
+    title: 'BROWZ Lip Blush Dubai | Soft, Natural Lip Colour',
+    description:
+      'Discover natural-looking Lip Blush at BROWZ Dubai. Custom-matched colour, improved definition and a complimentary consultation.',
+    siteName: 'BROWZ',
+    images: [
+      {
+        url: '/meta/OGimage.jpg',
+        alt: 'BROWZ Lip Blush Dubai',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'BROWZ Lip Blush Dubai | Soft, Natural Lip Colour',
+    description:
+      'Discover natural-looking Lip Blush at BROWZ Dubai. Custom-matched colour, improved definition and a complimentary consultation.',
+    images: ['/meta/OGimage.jpg'],
+  },
   icons: {
     icon: [
       {
